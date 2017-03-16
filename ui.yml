@@ -1,4 +1,15 @@
-
+zuul:
+  routes:
+    message:
+      sensitiveHeaders:
+      path: /api/messages/**
+      url: http://localhost:7777/api/messages
+    authorization:
+      sensitiveHeaders:
+      path: /auth/**
+      url: http://localhost:9999/
+      #stripPrefix: false
+  addProxyHeaders: true
 # Define the Eureka server that handles service registration
 eureka:
   client:
