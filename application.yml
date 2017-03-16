@@ -1,0 +1,7 @@
+mail:
+  domain: gmail.com
+info:
+  id: ${spring.application.name}
+logging:
+  level:
+    org.springframework.security: DEBUG
