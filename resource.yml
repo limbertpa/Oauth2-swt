@@ -1,0 +1,23 @@
+server:
+  port: 7777
+  #session-timeout: 10
+security:
+  basic:
+    enabled: false
+  oauth2:
+    resource:
+      jwt:
+        key-uri: ${auth-server}/oauth/token_key
+logging:
+  level:
+    org.springframework.security: DEBUG
+spring:
+  jackson:
+    date-format: com.fasterxml.jackson.databind.util.ISO8601DateFormat
+#tomcat:
+  #version: 8.0.32
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
